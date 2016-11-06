@@ -1,0 +1,68 @@
+CISC 457 Assignment 2
+Due Tuesday, November 8, 2016 at 6:00pm
+
+Students may work individually or in pairs on this assignment.
+
+Modify the 'base' program provided in this archive to add the
+following features:
+
+0. Run the code.  Press '?' to see the options.  Read and understand
+   all of the code, including the Complex class, which you will use.
+
+1. Implement the FFT() function.  The necessary bit-reversal code is
+   provided.  You should use the main FFT code from class.
+
+     [2 marks] FFT code from class
+
+2. Implement the FFT2D() function.  See the comments in that function.
+
+     [2 marks] rows computation
+     [2 marks] column computation
+
+3. Implement the forwardFFT2D() function.  This just sets up the data
+   and calls FFT2D().  But the data must be slightly modified so that
+   the F.T. is centred in the window at (N/2,N/2).
+
+     [2 marks] copy and centre (a bit tricky to get (-1)^(x+y) correct)
+     [1 mark] call FFT2D() appropriately
+
+4. Implement the inverseFFT2D() function.  This uses the FFT2D() as a
+   black box, so requires that the conjugate of the F.T. be input to
+   the black box, and that the real component of the result be stored
+   after the computation is done.  You must normalize the real
+   component (think about this).  You must also undo the effect of
+   centring in step 3, above.
+
+     [1 mark] form a copy of the complex conjugate
+     [1 mark] call FFT2D() appropriately
+     [1 mark] extract real part and normalize
+     [1 mark] undo centring
+
+5. Once the code works, use it to explore the FFT of the circle and
+   gaussian images.  Do not hand anything in for this.  [0 marks]
+
+6. Use your code to remove the noise from the noisy1.jpg, noisy2.png,
+   and noisy3.png.  Submit the de-noised images and the F.T. of the
+   de-noised images.
+
+     [1 mark] good denoising of noisy1.jpg and noisy2.png
+     [1 mark] good denoising of noisy3.jpg
+
+7. Email to sijia.li@queensu.ca a zip archive containing these eight
+   files, with exactly these names:
+
+     [1 mark] for following these submission instructions *exactly*
+
+     base.pde                   your code
+
+     readme.txt                 your names and student numbers and any 
+				comments you want to provide
+
+     noisy1-denoised.png        de-noised noisy1.jpg
+     noisy1-ft.png              2D Fourier transform of de-noised noisy1.jpg
+
+     noisy2-denoised.png        de-noised noisy2.png
+     noisy2-ft.png              2D Fourier transform of de-noised noisy2.png
+
+     noisy3-denoised.png        de-noised noisy3.png
+     noisy3-ft.png              2D Fourier transform of de-noised noisy3.png
