@@ -13,7 +13,7 @@ PImage outputImage;             // image currently being rendered, size NxN
 
 boolean showingFT = false;      // true when showing the F.T.
 
-int filterType = 2;             // type of filter to apply to F.T. (0=Gaussian, 1=Butterworth, 2=box)
+int filterType = 0;             // type of filter to apply to F.T. (0=Gaussian, 1=Butterworth, 2=box)
 float filterRadius = 15;        // radius of filter applied to image (in units of pixels)
 
 float logFactor = 400;          // log factor for enhancing spectrum
@@ -27,7 +27,7 @@ int winHeight = 1024;           // window height
 int minLum = 16;                // min luminance (Y) value storable
 int maxLum = 235;               // max luminance (Y) value storable
 
-String imageFilename = "noisy2.png"; // current image file
+String imageFilename = "lena.jpg"; // current image file
 
 
 // Init
